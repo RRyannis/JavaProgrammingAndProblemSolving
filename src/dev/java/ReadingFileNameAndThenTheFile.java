@@ -16,6 +16,23 @@ public class ReadingFileNameAndThenTheFile {
         try
         {
             inputStream = new Scanner(new File(fileName));
+            File fileObject = new File(fileName);
+            boolean fileOK = false;
+            while(!fileOK) {
+                if (!fileObject.exists( ))
+                    System.out.println("No such file");
+                else if (!fileObject.canRead())
+                    System.out.println("That file is not readable.");
+                else
+                    fileOK = true;
+                if (!fileOK)
+                {
+                    System.out.println("Enter file name again:");
+                    fileName = keyboard.next( );
+                    fileObject = new File(fileName);
+                }
+            }
+
         }
         catch(FileNotFoundException e)
         {
@@ -30,3 +47,5 @@ public class ReadingFileNameAndThenTheFile {
         inputStream.close();
     }
 }
+
+
