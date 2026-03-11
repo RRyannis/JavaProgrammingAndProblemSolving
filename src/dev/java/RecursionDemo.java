@@ -7,6 +7,7 @@ public class RecursionDemo {
         //System.out.println(fibonacci(6));
         methodA(3);
         methodA(5);
+        methodA(7);
     }
 
     private static int factorial(int n) {
