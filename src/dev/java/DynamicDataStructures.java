@@ -18,6 +18,7 @@ public class DynamicDataStructures {
         intSet.add(3);
         intSet.add(2);
         intSet.add(5);
+        intSet.add(4);
         printSet(intSet);
         System.out.println("Set contains 2: " +
                 intSet.contains(2));
