@@ -29,6 +29,19 @@ public class DynamicDataStructures {
         HashMap<String, Integer> mountains = new HashMap<String, Integer>();
         mountains.put("Everest", 29029);
         System.out.println("Everest in the map: " + mountains.containsKey("Everest"));
+        mountains.put("K2", 28251);
+        mountains.put("Kangchenjunga", 28169);
+        mountains.put("Denali", 20335);
+        printMap(mountains);
+        System.out.println("Denali in the map: " +
+                mountains.containsKey("Denali"));
+        System.out.println();
+        System.out.println("Changing height of Denali.");
+        mountains.put("Denali", 20320);
+        printMap(mountains);
+        System.out.println("Removing Kangchenjunga.");
+        mountains.remove("Kangchenjunga");
+        printMap(mountains);
     }
     public static void printSet(HashSet<Integer> intSet){
         System.out.println("The set contains: ");
@@ -36,5 +49,16 @@ public class DynamicDataStructures {
             Integer num = (Integer) obj;
             System.out.println(num.intValue());
         }
+    }
+    public static void printMap(HashMap<String, Integer> map)
+    {
+        System.out.println("Map contains:");
+        for (String keyMountainName : map.keySet())
+        {
+            Integer height = map.get(keyMountainName);
+            System.out.println(keyMountainName + " --> " +
+                    height.intValue() + " feet.");
+        }
+        System.out.println();
     }
 }
