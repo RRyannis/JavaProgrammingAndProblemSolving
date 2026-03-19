@@ -32,6 +32,7 @@ public class DynamicDataStructures {
         mountains.put("K2", 28251);
         mountains.put("Kangchenjunga", 28169);
         mountains.put("Denali", 20335);
+        mountains.put("Fuji", 12390);
         printMap(mountains);
         System.out.println("Denali in the map: " +
                 mountains.containsKey("Denali"));
