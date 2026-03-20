@@ -3,7 +3,7 @@ package dev.java;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-
+// working and practicing with java collections
 public class DynamicDataStructures {
     public static void main(String[] args) {
 //        String[] anArray = new String[20];
