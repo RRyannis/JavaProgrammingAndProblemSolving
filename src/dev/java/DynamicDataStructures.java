@@ -12,6 +12,7 @@ public class DynamicDataStructures {
 //        aList.add("Two");
 //        aList.add("Three");
 //        aList.add(0,"Four");
+        //aList.add(0,"Nine");
 //        System.out.println(aList.get(0));
 //        HashSet<Integer> intSet = new HashSet<Integer>();
 //        intSet.add(1);
