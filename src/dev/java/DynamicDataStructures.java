@@ -44,12 +44,23 @@ public class DynamicDataStructures {
         System.out.println("Removing Kangchenjunga.");
         mountains.remove("Kangchenjunga");
         printMap(mountains);
+        HashSet<String> colors = new HashSet<String>();
+        colors.add("red");
+        colors.add("blue");
+        printSet(colors);
     }
-    public static void printSet(HashSet<Integer> intSet){
+//    public static void printSet(HashSet<Integer> intSet){
+//        System.out.println("The set contains: ");
+//        for (Object obj: intSet.toArray()){
+//            Integer num = (Integer) obj;
+//            System.out.println(num.intValue());
+//        }
+//    }
+    public static void printSet(HashSet<String> colors){
         System.out.println("The set contains: ");
-        for (Object obj: intSet.toArray()){
-            Integer num = (Integer) obj;
-            System.out.println(num.intValue());
+        for (Object obj: colors.toArray()){
+            String color = (String)obj;
+            System.out.println(color);
         }
     }
     public static void printMap(HashMap<String, Integer> map)
