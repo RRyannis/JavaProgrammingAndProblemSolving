@@ -3,6 +3,7 @@ package dev.java;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 // working and practicing with java collections
 public class DynamicDataStructures {
     public static void main(String[] args) {
@@ -53,7 +54,7 @@ public class DynamicDataStructures {
         HashMap<Integer, String> studentIDS = new HashMap<Integer, String>();
         studentIDS.put(5531, "George");
         studentIDS.put(9102, "John");
-        System.out.println(studentIDS.get(9102));
+        System.out.println(studentIDS.get(9102))  ;
     }
 //    public static void printSet(HashSet<Integer> intSet){
 //        System.out.println("The set contains: ");
@@ -80,4 +81,30 @@ public class DynamicDataStructures {
         }
         System.out.println();
     }
+    public class ListNode {
+        private String data;
+        private ListNode link;
+        public ListNode(){
+            data = null;
+            link = null;
+        }
+        public ListNode(String newData, ListNode newLink){
+            data = newData;
+            link = newLink;
+        }
+        public void setData(String newData){
+            data = newData;
+        }
+        public String getData(){
+            return data;
+        }
+        public void setLink(ListNode newLink){
+            link = newLink;
+        }
+        public ListNode getLink(){
+            return link;
+        }
+    }
 }
+
+
