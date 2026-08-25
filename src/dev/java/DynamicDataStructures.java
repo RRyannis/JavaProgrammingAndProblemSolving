@@ -54,7 +54,8 @@ public class DynamicDataStructures {
         HashMap<Integer, String> studentIDS = new HashMap<Integer, String>();
         studentIDS.put(5531, "George");
         studentIDS.put(9102, "John");
-        System.out.println(studentIDS.get(9102))  ;
+        System.out.println(studentIDS.get(9102));
+        
     }
 //    public static void printSet(HashSet<Integer> intSet){
 //        System.out.println("The set contains: ");
@@ -103,6 +104,62 @@ public class DynamicDataStructures {
         }
         public ListNode getLink(){
             return link;
+        }
+    }
+    public class StringLinkedList{
+        private ListNode head;
+        public StringLinkedList(){
+            head = null;
+        }
+        public void showList(){
+            ListNode position = head;
+            while (position != null)
+            {
+                System.out.println(position.getData());
+                position = position.getLink();
+            }
+        }
+        public int length(){
+            int count = 0; //typo page 892 of the book
+            ListNode position = head;
+            while (position != null)
+            {
+                count++;
+                position = position.getLink();
+            }
+            return count;
+        }
+        public void addANodeToStart(String addData)
+        {
+            head = new ListNode(addData, head);
+        }
+        public void deleteHeadNode()
+        {
+            if (head != null)
+                head = head.getLink();
+            else
+            {
+                System.out.println("Deleting from an empty list.");
+                System.exit(0);
+            }
+        }
+        public boolean onList(String target)
+        {
+            return find(target) != null;
+        }
+        private ListNode find(String target)
+        {
+            boolean found = false;
+            ListNode position = head;
+            while ((position != null) && !found)
+            {
+                String dataAtPosition = position.getData();
+                if (dataAtPosition.equals(target))
+                    found = true;
+                else
+                    position = position.getLink();
+            }
+            return position;
         }
     }
 }
