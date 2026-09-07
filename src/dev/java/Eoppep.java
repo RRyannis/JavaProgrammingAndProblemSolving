@@ -50,14 +50,34 @@ public class Eoppep {
 //exam question 202, group A
 
 
-class TemperatureConverter {
-    public static void main(String[] args) {
-        Scanner scanner  = new Scanner(System.in);
-        System.out.println("Enter temperature in Fahrenheit: ");
-        double temperature = scanner.nextDouble();
-        double celsius = 5 * (temperature - 32) / 9;
-        System.out.println("Temperature in Celsius: " + celsius);
+//class TemperatureConverter {
+//    public static void main(String[] args) {
+//        Scanner scanner  = new Scanner(System.in);
+//        System.out.println("Enter temperature in Fahrenheit: ");
+//        double temperature = scanner.nextDouble();
+//        double celsius = 5 * (temperature - 32) / 9;
+//        System.out.println("Temperature in Celsius: " + celsius);
+//
+//        scanner.close();
+//    }
+//}
 
-        scanner.close();
+//exam question 193, group A
+
+class Automobile {
+
+    String color;
+
+    public Automobile(String c) {
+        color = c;
+    }
+
+    void honk() {
+        System.out.println("Honking!");
+    }
+
+    public static void main(String[] args) {
+        Automobile car = new Automobile("blue");
+        car.honk();
     }
 }
