@@ -5,8 +5,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Eoppep {
-}
+
 //exam question 49, groub b
 //class Example {
 //    private int value;
@@ -64,20 +63,48 @@ public class Eoppep {
 
 //exam question 193, group A
 
-class Automobile {
+//class Automobile {
+//
+//    String color;
+//
+//    public Automobile(String c) {
+//        color = c;
+//    }
+//
+//    void honk() {
+//        System.out.println("Honking!");
+//    }
+//
+//    public static void main(String[] args) {
+//        Automobile car = new Automobile("blue");
+//        car.honk();
+//    }
+//}
 
-    String color;
+//exam question 203, group A
+import java.util.Arrays;
+import java.util.Scanner;
 
-    public Automobile(String c) {
-        color = c;
-    }
-
-    void honk() {
-        System.out.println("Honking!");
-    }
+class NameSorter {
 
     public static void main(String[] args) {
-        Automobile car = new Automobile("blue");
-        car.honk();
+        Scanner scanner = new Scanner(System.in);
+        String[] names = new String[6];
+        System.out.println("Enter 6 names: ");
+        for (int i = 0; i < 6; i++) {
+            names[i] = scanner.nextLine();
+        }
+        Arrays.sort(names);
+
+        System.out.println("Sorted names: ");
+        for (String name : names) {
+            System.out.println(name);
+        }
+
+        scanner.close();
     }
+
+
+
+
 }
